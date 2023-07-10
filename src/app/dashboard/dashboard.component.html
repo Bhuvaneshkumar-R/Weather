@@ -1,0 +1,82 @@
+
+
+
+
+<div class="container">
+    <div class="upper-data">
+      <p> 
+        <img src ="assets\weatherii.png"   > 
+
+     </p>
+
+        <div class="weather-data">
+            <div class="location">{{WeatherData.name}}</div>
+            <div class="tempature">{{ WeatherData.temp_celcius}}°C</div>
+        </div>
+    </div>
+   
+    <div class="lower-data">
+       <div class="more-info-label">
+           <h1>Predicts</h1>
+       </div>
+
+       <!--Minimum temp-->
+
+
+       <div class="more-info-container">
+            <div class="info-block">
+                <div class="info-block-label">
+                    <p>
+                        <img src="assets/min.png">
+                    </p>
+                    <span>min</span>
+                </div>
+                <div class="info-block-label-value">
+                   {{WeatherData.temp_min }}°C
+                </div>
+            </div>
+       </div>
+
+
+       <!--Maximum temp-->
+
+
+       <div class="more-info-container">
+            <div class="info-block">
+                <div class="info-block-label">
+                    <p>
+                        <img src="assets/max.png">
+                    </p>
+                    <span>max</span>
+                </div>
+                <div class="info-block-label-value">
+                    {{WeatherData.temp_max}}°C
+                </div>
+            </div>
+       </div>
+
+
+       <!--Humidity-->
+
+
+       <div class="more-info-container">
+        <div class="info-block">
+            <div class="info-block-label">
+                <p>
+                    <img src="assets/humidity.png">
+                </p>
+                <span>humidity</span>
+            </div>
+            <div class="info-block-label-value">
+                {{WeatherData.main.humidity}}%
+            </div>
+        </div>
+
+
+        
+   </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,36 @@
+<div >
+            <mat-card class="example-card">
+                <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title style="font-size:xx-large;" >Login</mat-card-title>
+                </mat-card-header>
+                
+
+                
+                <div class="example-container">
+                    <mat-form-field appearance="outline" class="style-card">
+                        <mat-label>User Email</mat-label>
+                        <input matInput  [formControl]="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+
+
+
+
+                    <mat-form-field appearance="outline" class="style-card1">
+                        <mat-label>
+                            Password
+                        </mat-label>
+                        <input matInput [type]="hide ? 'password' :'text' " [formControl]="password" required>
+                        <mat-error *ngIf="password.invalid">{{getErrorPass()}}</mat-error>
+                        
+                    </mat-form-field>
+                </div>
+                <hr>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" class = "button-row" [disabled] = "((email.valid==true) && (password.valid==true))?false:true" (click) ="onButtonClick()" >Login</button>
+                </mat-card-actions>
+                
+            </mat-card>
+    </div>
+    
